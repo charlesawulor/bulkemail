@@ -124,7 +124,7 @@ class EmployeeController extends Controller
         $user = employee::all();
         foreach ($user as $all)
         {
-         Mail::raw("Good morning to you and have a productive day ahead. Reply to c.awuloy@yahoo.com .", function($message) use ($all)
+         Mail::raw("Bulk email testing web application.\nsincerely,\ncharles.", function($message) use ($all)
         {
           $message->from('winner@lottery.com');
           $message->to($all->email)->subject('Winner');
