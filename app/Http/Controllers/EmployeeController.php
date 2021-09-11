@@ -118,16 +118,15 @@ class EmployeeController extends Controller
 
     public function sendemail()
     {
-
-
-
         $user = employee::all();
         foreach ($user as $all)
         {
-         Mail::raw("Bulk email testing web application.\nsincerely,\ncharles.", function($message) use ($all)
+         Mail::raw("Try bulk email delivery.\nThanks,\nAwulor.", function($message) use ($all)
         {
-          $message->from('winner@lottery.com');
-          $message->to($all->email)->subject('Winner');
+          $message->from('testing@pocketandpurse.org');
+          $message->replyTo('info@pocketandpurse.org', 'Reply');
+          //$message->to($all->email)->subject('Hello');
+          $message->bcc($all->email)->subject('Hello');
            });
            }
          //  $this->info('Daily message sent');
