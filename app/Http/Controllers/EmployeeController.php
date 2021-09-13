@@ -121,12 +121,12 @@ class EmployeeController extends Controller
         $user = employee::all();
         foreach ($user as $all)
         {
-         Mail::raw("Try bulk email delivery.\nThanks,\nAwulor.", function($message) use ($all)
+         Mail::raw("Trying bulk email system.\nThanks,\nAwulor.", function($message) use ($all)
         {
           $message->from('testing@pocketandpurse.org');
           $message->replyTo('info@pocketandpurse.org', 'Reply');
-          //$message->to($all->email)->subject('Hello');
-          $message->bcc($all->email)->subject('Hello');
+          $message->to($all->email)->subject('Hello');
+         // $message->bcc($all->email)->subject('BulkEmail');
            });
            }
          //  $this->info('Daily message sent');

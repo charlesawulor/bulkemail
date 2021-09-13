@@ -30,6 +30,8 @@ Route::get('/addemployee', 'EmployeeController@index')->name('employee');
 
 Route::get('/viewemployee', 'EmployeeController@index')->name('viewemployee');
 
+Route::post('/viewemployee', 'EmployeeController@index')->name('viewemployee');
+
 
 Route::get('/viewallemployee', 'EmployeeController@sendemail')->name('viewallemployee');
 

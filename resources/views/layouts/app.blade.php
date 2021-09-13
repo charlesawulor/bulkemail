@@ -40,8 +40,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                  
-                        <li class="nav-item">
+                       
+
+                           <li class="nav-item">
                                 <a class="nav-link" href="{{ route('viewemployee') }}">{{ __('View All Email') }}</a>
                             </li>
 
@@ -71,6 +72,7 @@
                                     </form>
                                 </div>
                             </li>
+
                         @endguest
                     </ul>
                 </div>
